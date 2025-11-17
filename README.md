@@ -179,7 +179,7 @@ vscode-toon/
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+Im welcome contributions! Here's how you can help:
 
 ### Getting Started
 

@@ -1,0 +1,35 @@
+// Tabular array with comma delimiter
+users[3]{id,name,email,plan,active}:
+  1,Alice Mitchell,alice@mitchell.com,Premium,true
+  2,Michael Chen,michael.chen@example.com,Basic,true
+  3,Jennifer Kumar,jennifer.kumar@example.com,Enterprise,false
+
+// Inline array
+tags[2]: analytics,notifications
+features[3]: search,filter,sort
+
+// Mixed array
+items[3]:
+  - 1
+  - a: 1
+  - x
+
+// Root array
+[2]: x,y
+
+// Settings object
+settings:
+  theme: dark
+  version: 2.1
+  enabled: true
+
+// Array with tab delimiter (shown as \t for clarity)
+items[2\t]{sku\tqty\tprice}:
+  A1\t2\t9.99
+  B2\t1\t14.5
+
+// Array with pipe delimiter
+data[2|]{name|value}:
+  Alice|admin
+  Bob|user
+

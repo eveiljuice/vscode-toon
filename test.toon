@@ -1,0 +1,10 @@
+users[3]{id,name,email,plan,active}:
+  1,Alice Mitchell,alice@mitchell.com,Premium,true
+  2,Michael Chen,michael.chen@example.com,Basic,true
+  3,Jennifer Kumar,jennifer.kumar@example.com,Enterprise,false
+
+settings:
+  theme: dark
+  version: 2.1
+  features[2]: analytics,notifications
+

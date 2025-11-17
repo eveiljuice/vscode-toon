@@ -1,0 +1,23 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Светло-бежевый фон -->
+  <rect width="16" height="16" fill="#F5E6D3"/>
+  
+  <!-- Буква T (верхний левый блок) -->
+  <rect x="1" y="1" width="6" height="1.5" fill="#1E3A5F"/>
+  <rect x="3.5" y="2.5" width="1.5" height="4.5" fill="#1E3A5F"/>
+  
+  <!-- Буква O (верхний правый блок) -->
+  <rect x="9" y="1" width="6" height="6" fill="#1E3A5F"/>
+  <rect x="11" y="3" width="2" height="2" fill="#F5E6D3"/>
+  
+  <!-- Буква O (нижний левый блок) -->
+  <rect x="1" y="9" width="6" height="6" fill="#1E3A5F"/>
+  <rect x="3" y="11" width="2" height="2" fill="#F5E6D3"/>
+  
+  <!-- Буква N (нижний правый блок) -->
+  <rect x="9" y="9" width="1.5" height="6" fill="#1E3A5F"/>
+  <rect x="10.5" y="9" width="1.5" height="1.5" fill="#1E3A5F"/>
+  <rect x="12" y="10.5" width="1.5" height="1.5" fill="#1E3A5F"/>
+  <rect x="13.5" y="12" width="1.5" height="3" fill="#1E3A5F"/>
+</svg>
+

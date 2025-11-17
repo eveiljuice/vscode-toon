@@ -1,0 +1,212 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Toon",
+  "scopeName": "source.toon",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#root-array"
+    },
+    {
+      "include": "#tabular-array"
+    },
+    {
+      "include": "#inline-array"
+    },
+    {
+      "include": "#mixed-array"
+    },
+    {
+      "include": "#object-key"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#booleans"
+    },
+    {
+      "include": "#delimiters"
+    },
+    {
+      "include": "#null"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.toon",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.toon",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "root-array": {
+      "patterns": [
+        {
+          "name": "meta.array.root.toon",
+          "match": "^\\s*\\[(\\d+)\\]\\s*:",
+          "captures": {
+            "1": {
+              "name": "constant.numeric.toon"
+            }
+          }
+        }
+      ]
+    },
+    "tabular-array": {
+      "patterns": [
+        {
+          "name": "meta.array.tabular.toon",
+          "match": "^\\s*([a-zA-Z_][a-zA-Z0-9_]*)\\[(\\d+)([,\\|\\t]?)\\]\\{([^}]*)\\}",
+          "captures": {
+            "1": {
+              "name": "entity.name.type.toon"
+            },
+            "2": {
+              "name": "constant.numeric.toon"
+            },
+            "3": {
+              "name": "keyword.operator.delimiter.toon"
+            },
+            "4": {
+              "name": "variable.parameter.toon"
+            }
+          }
+        }
+      ]
+    },
+    "inline-array": {
+      "patterns": [
+        {
+          "name": "meta.array.inline.toon",
+          "match": "^\\s*([a-zA-Z_][a-zA-Z0-9_]*)\\[(\\d+)([,\\|\\t]?)\\]\\s*:",
+          "captures": {
+            "1": {
+              "name": "entity.name.type.toon"
+            },
+            "2": {
+              "name": "constant.numeric.toon"
+            },
+            "3": {
+              "name": "keyword.operator.delimiter.toon"
+            }
+          }
+        }
+      ]
+    },
+    "mixed-array": {
+      "patterns": [
+        {
+          "name": "meta.array.mixed.toon",
+          "match": "^\\s*-\\s*",
+          "captures": {
+            "0": {
+              "name": "keyword.operator.list.toon"
+            }
+          }
+        },
+        {
+          "name": "meta.array.mixed.nested.toon",
+          "match": "^\\s*-\\s*\\[(\\d+)\\]\\s*:",
+          "captures": {
+            "1": {
+              "name": "constant.numeric.toon"
+            }
+          }
+        }
+      ]
+    },
+    "object-key": {
+      "patterns": [
+        {
+          "name": "meta.object-key.toon",
+          "match": "^\\s*([a-zA-Z_][a-zA-Z0-9_]*)\\s*:",
+          "captures": {
+            "1": {
+              "name": "variable.other.property.toon"
+            }
+          }
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.toon",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.toon",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.unquoted.toon",
+          "match": "(?<!\")\\b[a-zA-Z_][a-zA-Z0-9_\\-@\\.]*\\b(?!\")"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.toon",
+          "match": "\\b\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.float.toon",
+          "match": "\\b\\d+\\.\\d+\\b"
+        }
+      ]
+    },
+    "booleans": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.true.toon",
+          "match": "\\btrue\\b"
+        },
+        {
+          "name": "constant.language.boolean.false.toon",
+          "match": "\\bfalse\\b"
+        }
+      ]
+    },
+    "null": {
+      "patterns": [
+        {
+          "name": "constant.language.null.toon",
+          "match": "\\bnull\\b"
+        }
+      ]
+    },
+    "delimiters": {
+      "patterns": [
+        {
+          "name": "keyword.operator.comma.toon",
+          "match": ","
+        },
+        {
+          "name": "keyword.operator.pipe.toon",
+          "match": "\\|"
+        },
+        {
+          "name": "keyword.operator.tab.toon",
+          "match": "\\t"
+        }
+      ]
+    }
+  }
+}
+

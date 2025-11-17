@@ -1,0 +1,88 @@
+{
+  "name": "toon-lang",
+  "displayName": "Toon Language Support",
+  "description": "Full language support for TOON format - syntax highlighting, validation, auto-completion, and formatting",
+  "version": "0.0.1",
+  "publisher": "toon",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "toon",
+    "toon-format",
+    "syntax",
+    "language",
+    "highlighting",
+    "llm",
+    "token-oriented"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eveiljuice/vscode-toon"
+  },
+  "bugs": {
+    "url": "https://github.com/eveiljuice/vscode-toon/issues"
+  },
+  "homepage": "https://github.com/eveiljuice/vscode-toon#readme",
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "toon",
+        "aliases": [
+          "Toon",
+          "toon"
+        ],
+        "extensions": [
+          ".toon"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "toon",
+        "scopeName": "source.toon",
+        "path": "./syntaxes/toon.tmLanguage.json"
+      }
+    ],
+    "configuration": {
+      "title": "Toon",
+      "properties": {
+        "toon.validation.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable validation of array length mismatches"
+        }
+      }
+    },
+    "iconThemes": [
+      {
+        "id": "toon-icons",
+        "label": "Toon File Icons",
+        "path": "./icons/toon-icon-theme.json"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:toon"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
+

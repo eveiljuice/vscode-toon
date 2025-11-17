@@ -1,0 +1,14 @@
+{
+  "iconDefinitions": {
+    "_toon_file": {
+      "iconPath": "./toon-icon.svg"
+    }
+  },
+  "fileExtensions": {
+    "toon": "_toon_file"
+  },
+  "fileNames": {
+    "*.toon": "_toon_file"
+  }
+}
+

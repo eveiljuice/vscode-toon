@@ -8,4 +8,6 @@ tsconfig.json
 !out/**/*.js
 !icons/**/*.svg
 !icons/**/*.json
+vsix-extracted/**
+*.vsix
 

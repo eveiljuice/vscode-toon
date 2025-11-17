@@ -1,11 +1,14 @@
 {
   "name": "toon-lang",
-  "displayName": "Toon Language Support",
+  "displayName": "TOON Format - Token-Oriented Object Notation",
   "description": "Full language support for TOON format - syntax highlighting, validation, auto-completion, and formatting",
-  "version": "0.0.1",
-  "publisher": "toon",
+  "version": "1.0.0",
+  "publisher": "Timo1153",
+  "author": {
+    "name": "Timo1153"
+  },
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.60.0"
   },
   "categories": [
     "Programming Languages"
@@ -20,9 +23,10 @@
     "token-oriented"
   ],
   "license": "MIT",
+  "icon": "icons/toon-icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eveiljuice/vscode-toon"
+    "url": "https://github.com/eveiljuice/vscode-toon.git"
   },
   "bugs": {
     "url": "https://github.com/eveiljuice/vscode-toon/issues"
@@ -81,7 +85,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "@types/vscode": "^1.85.0",
+    "@types/vscode": "^1.60.0",
     "typescript": "^5.3.0"
   }
 }

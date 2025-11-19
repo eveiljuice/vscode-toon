@@ -17,7 +17,7 @@
 
 ## 📋 About
 
-**Toon Language Support** is a comprehensive VS Code extension that provides syntax highlighting, validation, auto-completion, and formatting for the [TOON format](https://github.com/toon-format/toon) — a token-oriented data format optimized for LLM processing.
+**Toon Language Support** is a comprehensive [VS Code extension](https://marketplace.visualstudio.com/items?itemName=Timo1153.toon-lang&ssr=false#review-details) that provides syntax highlighting, validation, auto-completion, and formatting for the [TOON format](https://github.com/toon-format/toon) — a token-oriented data format optimized for LLM processing.
 
 This extension transforms your VS Code into a powerful editor for `.toon` files, making it easy to work with tabular arrays, inline arrays, mixed arrays, and all TOON format features.
 
